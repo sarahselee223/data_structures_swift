@@ -74,5 +74,3 @@ func seeTreeNods() {
 func getNodeNumber() -> Int {
     return tree.count
 }
-
-// Binary Search Trees
