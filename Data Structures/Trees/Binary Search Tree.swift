@@ -35,23 +35,31 @@ extension BinarySearchTree {
         }
     }
 
-    private func newTreeWithInsertedValue(newValue: T) -> BinarySearchTree {
-      switch self {
-      // 1
-      case .empty:
-        return .node(.empty, newValue, .empty)
-      // 2
-      case let .node(left, value, right):
-        if newValue < value {
-          return .node(left.newTreeWithInsertedValue(newValue: newValue), value, right)
-        } else {
-          return .node(left, value, right.newTreeWithInsertedValue(newValue: newValue))
+    private func newTreeWithInsertedValue(newVal: T) -> BinarySearchTree {
+        switch self {
+        case .empty:
+            return .node(.empty, newVal, .empty)
+        case .node(let left, let val, let right):
+            if newVal < val {
+                return .node(left.newTreeWithInsertedValue(newVal: newVal), val, right)
+            } else {
+                return .node(left, val, right.newTreeWithInsertedValue(newVal: newVal))
+            }
         }
-      }
     }
     
-    mutating func insert(newValue: T) {
-      self = newTreeWithInsertedValue(newValue: newValue)
+    mutating func insert(newVal: T) {
+        self = newTreeWithInsertedValue(newVal:  newVal)
     }
-    
 }
+
+var binarySearchTree: BinarySearchTree<Int> = .empty
+// binarySearchTree.insert(newVal: 7)
+// binarySearchTree.insert(newVal: 2)
+// binarySearchTree.insert(newVal: 10)
+// binarySearchTree.insert(newVal: 1)
+// binarySearchTree.insert(newVal: 9)
+
+// print(binarySearchTree)
+// value: 7, left = [value: 2, left = [value: 1, left = [], right = []], right = []], right = [value: 10, left = [value: 9, left = [], right = []], right = []]
+
