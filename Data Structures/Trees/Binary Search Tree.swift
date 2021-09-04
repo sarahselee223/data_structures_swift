@@ -39,7 +39,7 @@ extension BinarySearchTree {
         switch self {
         case .empty:
             return .node(.empty, newVal, .empty)
-        case .node(let left, let val, let right):
+        case let .node(left, val, right):
             if newVal < val {
                 return .node(left.newTreeWithInsertedValue(newVal: newVal), val, right)
             } else {
@@ -51,15 +51,65 @@ extension BinarySearchTree {
     mutating func insert(newVal: T) {
         self = newTreeWithInsertedValue(newVal:  newVal)
     }
+    
+    // all the way left, then current node, then right side
+    func traverseInorder(process: (T) -> Void){
+        switch self {
+        case .empty:
+            return
+        case let .node(left, val, right):
+            left.traverseInorder(process: process)
+            process(val)
+            right.traverseInorder(process: process)
+        }
+    }
+    
+    // current node first, then left, then right
+    func traversePreOrder(process: (T) -> Void) {
+        switch self {
+        case .empty:
+            return
+        case let .node(left, val, right):
+            process(val)
+            left.traversePreOrder(process: process)
+            right.traversePreOrder(process: process)
+        }
+    }
+    
+    func traversePostOrder(process: (T) -> Void) {
+        switch self {
+        case .empty:
+            return
+        case let .node(left, val, right):
+            left.traversePostOrder(process: process)
+            right.traversePostOrder(process: process)
+            process(val)
+        }
+    }
 }
 
 var binarySearchTree: BinarySearchTree<Int> = .empty
+// Test Insert Func
 // binarySearchTree.insert(newVal: 7)
 // binarySearchTree.insert(newVal: 2)
 // binarySearchTree.insert(newVal: 10)
 // binarySearchTree.insert(newVal: 1)
+// binarySearchTree.insert(newVal: 5)
 // binarySearchTree.insert(newVal: 9)
 
 // print(binarySearchTree)
 // value: 7, left = [value: 2, left = [value: 1, left = [], right = []], right = []], right = [value: 10, left = [value: 9, left = [], right = []], right = []]
 
+// Test TraverseInorder Func
+// binarySearchTree.insert(newVal: 7)
+// binarySearchTree.insert(newVal: 2)
+// binarySearchTree.insert(newVal: 10)
+// binarySearchTree.insert(newVal: 1)
+// binarySearchTree.insert(newVal: 5)
+// binarySearchTree.insert(newVal: 9)
+// binarySearchTree.traverseInorder{ print($0) }
+// 1 -> 2 -> 5 -> 7 -> 9 -> 10
+// Test traversePreOrder Func
+// 7 -> 2 -> 1 -> 5 -> 10 -> 9
+// Test traversePostOrder Func
+// 1 -> 5 -> 2 -> 9 -> 10 -> 7
