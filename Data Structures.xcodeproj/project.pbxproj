@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		26004A4527790E2100D0FBC2 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26004A4427790E2100D0FBC2 /* Heap.swift */; };
+		26004A48277FF74D00D0FBC2 /* Pascals trianagle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26004A47277FF74D00D0FBC2 /* Pascals trianagle.swift */; };
 		26164C7726DC1417007B6A9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26164C7626DC1417007B6A9B /* AppDelegate.swift */; };
 		26164C7926DC1417007B6A9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26164C7826DC1417007B6A9B /* SceneDelegate.swift */; };
 		26164C7B26DC1417007B6A9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26164C7A26DC1417007B6A9B /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		26004A4427790E2100D0FBC2 /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
+		26004A47277FF74D00D0FBC2 /* Pascals trianagle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pascals trianagle.swift"; sourceTree = "<group>"; };
 		26164C7326DC1417007B6A9B /* Data Structures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Data Structures.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26164C7626DC1417007B6A9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26164C7826DC1417007B6A9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26004A46277FF6DD00D0FBC2 /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				26004A47277FF74D00D0FBC2 /* Pascals trianagle.swift */,
+			);
+			path = Algorithms;
+			sourceTree = "<group>";
+		};
 		26164C6A26DC1417007B6A9B = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		26164C7526DC1417007B6A9B /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
+				26004A46277FF6DD00D0FBC2 /* Algorithms */,
 				26AB53D22708E5ED0052C7C6 /* Other */,
 				26164C8A26DC1440007B6A9B /* Trees */,
 				26164C7626DC1417007B6A9B /* AppDelegate.swift */,
@@ -175,6 +186,7 @@
 				26004A4527790E2100D0FBC2 /* Heap.swift in Sources */,
 				26BFAA0426E6A76C00372193 /* AVLTree.swift in Sources */,
 				26AB53D42708E6350052C7C6 /* DiningPhilosophers.swift in Sources */,
+				26004A48277FF74D00D0FBC2 /* Pascals trianagle.swift in Sources */,
 				26164C7726DC1417007B6A9B /* AppDelegate.swift in Sources */,
 				26164C7926DC1417007B6A9B /* SceneDelegate.swift in Sources */,
 			);
