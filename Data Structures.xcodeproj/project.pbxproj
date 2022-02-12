@@ -20,6 +20,8 @@
 		26164C8E26DC1A50007B6A9B /* Binary Search Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26164C8D26DC1A50007B6A9B /* Binary Search Tree.swift */; };
 		26AB53D42708E6350052C7C6 /* DiningPhilosophers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AB53D32708E6350052C7C6 /* DiningPhilosophers.swift */; };
 		26BFAA0426E6A76C00372193 /* AVLTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BFAA0326E6A76C00372193 /* AVLTree.swift */; };
+		26C6010427B82E3E001010A5 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6010327B82E3E001010A5 /* Graph.swift */; };
+		26C6010627B8331F001010A5 /* AdjacencyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6010527B8331F001010A5 /* AdjacencyList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		26164C8D26DC1A50007B6A9B /* Binary Search Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binary Search Tree.swift"; sourceTree = "<group>"; };
 		26AB53D32708E6350052C7C6 /* DiningPhilosophers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningPhilosophers.swift; sourceTree = "<group>"; };
 		26BFAA0326E6A76C00372193 /* AVLTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVLTree.swift; sourceTree = "<group>"; };
+		26C6010327B82E3E001010A5 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		26C6010527B8331F001010A5 /* AdjacencyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjacencyList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		26164C7526DC1417007B6A9B /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
+				26C6010227B82E0F001010A5 /* Graph */,
 				26004A46277FF6DD00D0FBC2 /* Algorithms */,
 				26AB53D22708E5ED0052C7C6 /* Other */,
 				26164C8A26DC1440007B6A9B /* Trees */,
@@ -110,6 +115,15 @@
 				26004A4427790E2100D0FBC2 /* Heap.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		26C6010227B82E0F001010A5 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				26C6010327B82E3E001010A5 /* Graph.swift */,
+				26C6010527B8331F001010A5 /* AdjacencyList.swift */,
+			);
+			path = Graph;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26C6010627B8331F001010A5 /* AdjacencyList.swift in Sources */,
 				26164C8C26DC1459007B6A9B /* BinaryTree.swift in Sources */,
 				26164C8E26DC1A50007B6A9B /* Binary Search Tree.swift in Sources */,
 				26004A4A27826A2600D0FBC2 /* Number of Islands.swift in Sources */,
@@ -190,6 +205,7 @@
 				26004A4527790E2100D0FBC2 /* Heap.swift in Sources */,
 				26BFAA0426E6A76C00372193 /* AVLTree.swift in Sources */,
 				26AB53D42708E6350052C7C6 /* DiningPhilosophers.swift in Sources */,
+				26C6010427B82E3E001010A5 /* Graph.swift in Sources */,
 				26004A48277FF74D00D0FBC2 /* Pascals trianagle.swift in Sources */,
 				26164C7726DC1417007B6A9B /* AppDelegate.swift in Sources */,
 				26164C7926DC1417007B6A9B /* SceneDelegate.swift in Sources */,
